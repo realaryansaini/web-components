@@ -1,0 +1,42 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #202027;
+}
+
+
+
+
+/* scollor */
+
+:root{
+    --gap:1rem;
+    --scrollor-width:400px;
+}
+.scrollor-container{
+    width: var(--scrollor-width);
+    overflow-x: hidden;
+    -webkit-mask: linear-gradient(90deg, transparent , white 20% , white 80% , transparent);
+    mask: linear-gradient(90deg, transparent , white 20% , white 80% , transparent);
+}
+
+.scrollor{
+    width: max-content;
+    display: flex;
+    gap: var(--gap);
+    animation: scroller 20s linear infinite ;
+}
+
+.scrollor span{
+  padding: 10px;
+  background-color: grey;
+  border-radius: 5px;
+}
+
+@keyframes scroller {
+    to{
+        transform: translateX(calc(-50% - var(--gap)/2));
+    }
+}
