@@ -2,6 +2,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 30px;
     height: 100vh;
     background-color: #202027;
 }
@@ -13,8 +15,9 @@ body{
 
 :root{
     --gap:1rem;
-    --scrollor-width:400px;
+    --scrollor-width:600px;
 }
+
 .scrollor-container{
     width: var(--scrollor-width);
     overflow-x: hidden;
@@ -26,7 +29,14 @@ body{
     width: max-content;
     display: flex;
     gap: var(--gap);
-    animation: scroller 20s linear infinite ;
+    animation: scroller var(--animation-duration , 40s) var(--animation-direction , forwards) linear infinite ;
+}
+
+.scrollor[data-direction="right"]{
+    --animation-direction:reverse;
+}
+.scrollor[data-direction="left"]{
+    --animation-direction:reverse;
 }
 
 .scrollor span{
