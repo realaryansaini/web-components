@@ -1,0 +1,54 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main{
+    min-height: 200vh;
+}
+
+span{
+    display: flex;
+    gap: 20px;
+}
+li{
+    list-style: none;
+}
+
+.logo{
+    font-size: 1.5rem;
+}
+
+
+
+
+
+.nav{
+    /* for desiging */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    background-color: blueviolet;
+    color: white;
+    text-transform: uppercase;
+    
+   /* for animation  */
+    animation: just_move linear 4s forwards;
+    animation-timeline: view();
+    animation-range: entry calc(100vh + 400px);
+
+}
+@keyframes just_move {
+    to{
+        width: 100%;
+        position: fixed;
+        top: 0;
+        background-color: rgb(11, 118, 120);
+    }
+}
