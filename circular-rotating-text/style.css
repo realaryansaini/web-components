@@ -1,0 +1,41 @@
+.main{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle{
+    --width:250px;
+    position: relative;
+    width: var(--width) ;
+    height: var(--width);
+    border-radius: 50%;
+    background-color: #3d3535;
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.text{
+    animation: just_rotate 10s infinite linear;
+    font-size: 1.2rem;
+    color: white;
+}
+
+@keyframes just_rotate {
+    to{
+        transform: rotate(360deg);
+    } 
+    
+}
+
+span{
+    position: absolute;
+    transform-origin: 0 calc(var(--width) / 2);
+}
