@@ -1,0 +1,33 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #121212;
+}
+
+h1{
+    padding: 5px 0;
+    position: relative;
+    color: white;
+}
+
+h1:hover::after{
+    left: 0;
+    width: 100%;
+}
+
+h1::after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    transition: width .7s linear;
+}
+
+
+
+
