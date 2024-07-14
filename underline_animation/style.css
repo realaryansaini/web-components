@@ -3,28 +3,37 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #121212;
+    /* background-color: #121212; */
 }
 
-h1{
-    padding: 5px 0;
+
+
+/* underline animation  */
+.underline_animation{
+   --text-color:black;
+   --underline-color:black;
+   --underline-height:2px;
+   --undeline-gap:2px;
+
+    /* padding: 5px 0; */
     position: relative;
-    color: white;
+    color: var(--text-color);
 }
 
-h1:hover::after{
+.underline_animation:hover::after{
     left: 0;
     width: 100%;
 }
 
-h1::after{
+.underline_animation::after{
     content: "";
     position: absolute;
-    background-color: white;
-    height: 3px;
+    background-color: var(--underline-color);
+    height: var(--underline-height);
     bottom: 0;
     right: 0;
     width: 0%;
+    transform: translateY(var(--undeline-gap));
     transition: width .7s linear;
 }
 
