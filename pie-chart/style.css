@@ -1,0 +1,16 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.pie_chart {
+    box-sizing: border-box;
+    min-width: 300px;
+    height: 300px;
+    background-image: radial-gradient(circle closest-side, transparent 100%, white 0px),
+        conic-gradient(from 180deg, red 0deg, red 30%, orange 0deg, orange 60%, green 0deg, green 90%, blue 0deg, blue 100%);
+}
