@@ -1,0 +1,40 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 100px;
+    background-color: #121212;
+}
+
+
+
+/* code for counter  */
+.counter_text{
+    --font-size:max(3.5rem , 12vw);
+    font-size: var(--font-size);
+    display: flex;
+    color: white;
+}
+
+.counter_text span li{
+    list-style: none;
+    animation: move_up 1.5s linear forwards;
+}
+
+.counter_text span{
+    height:var(--font-size);
+    overflow-y: hidden;
+}
+
+@keyframes move_up {
+    to{
+        transform: translateY(calc(-100% * var(--i)));
+    }
+}
